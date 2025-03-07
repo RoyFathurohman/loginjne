@@ -1,0 +1,391 @@
+body {
+    font-family: Calibri, sans-serif;
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('backgorund.png') no-repeat center center/cover;
+    margin: 0;
+    font-family: Calibri, sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 220px; /* Lebar dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px; /* Biar sudutnya lebih halus */
+  padding: 8px 0;
+  text-align: center;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  transition: background 0.3s;
+  white-space: nowrap; /* Mencegah teks turun ke bawah */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Jika terlalu panjang, kasih "..." */
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+/* Menampilkan dropdown saat hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: red;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: darkred;
+}
+/* Tambahkan background untuk dashboard */
+.dashboard-container {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* Biar full layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Style biar teks lebih jelas */
+.main-content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan putih */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style tombol logout */
+.logout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d9534f; /* Warna merah logout */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c; /* Efek hover lebih gelap */
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.navbar a i {
+  font-size: 20px;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Container utama */
+.main-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Banner */
+.banner {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Buat dashboard biar center di layar */
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertical */
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Biar tetap di tengah meski kontennya sedikit */
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-content {
+    width: 80%; /* Sesuaikan dengan kebutuhan */
+    max-width: 900px; /* Biar nggak terlalu lebar */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* Biar sidebar dan main-content sejajar */
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+/* Main content biar tetap center dan nggak nempel sidebar */
+.main-content {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    text-align: center; /* Pastikan teks juga rata tengah */
+}
+
+
+header {
+    background: #0047AB;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #ff0000;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Responsive, menyesuaikan layar */
+    max-width: 500px; /* Maksimum ukuran di desktop */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup img {
+    max-width: 100%; /* Biar gambar tidak keluar dari popup */
+    height: auto;
+    border-radius: 5px;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .popup {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .popup .close-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+#promoOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Efek gelap di belakang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.promo-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px; /* Batas ukuran maksimal */
+    width: 90%; /* Agar responsif */
+    position: relative;
+}
+
+.promo-image {
+    max-width: 100%; /* Agar gambar tidak lebih besar dari container */
+    border-radius: 8px;
+}
+
+.promo-container button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+<script>
+function closePromo() {
+    document.getElementById("promoOverlay").style.display = "none";
+}
+</script>
+
+
+
+
